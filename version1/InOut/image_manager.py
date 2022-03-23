@@ -29,7 +29,7 @@ class DatasetHandler(Dataset):
         if path:
             self.eval = True
             self.path = path
-            self.files_saved = os.listdir(self.path)
+            self.files_saved = [f for f in os.listdir(path) if not f.startswith('.')]
             self.num_instances_x_file = 1000
             self.starting_seed = 123
             self.tot_num_of_instances = 1000
@@ -41,7 +41,7 @@ class DatasetHandler(Dataset):
             self.num_instances_x_file = settings.num_instances_x_file
             self.starting_seed = 10000
             self.tot_num_of_instances = self.settings.total_number_instances
-            self.new_instances = 10
+            self.new_instances = 5
         self.file = File(f"{self.path}/{self.files_saved[0]}", "r")
         self.image_creator = ImageTrainDataCreator(settings, cases=self.cases)
 
@@ -150,7 +150,7 @@ class OnlineDataSetHandler(Dataset, ABC):
         self.path = self.dir_ent.folder_instances
         self.mode = mode
         if mode == 'eval':
-            self.files_saved = os.listdir("./data/eval/")
+            self.files_saved = [f for f in os.listdir("./data/eval/") if not f.startswith('.')]
             self.path = "./data/eval"
             self.num_instances_x_file = 1000
             self.tot_num_of_instances = 1000

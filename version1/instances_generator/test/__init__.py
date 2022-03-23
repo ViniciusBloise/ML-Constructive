@@ -19,7 +19,7 @@ from test.tsplib_reader import Read_TSP_Files
 class CheckCL(DatasetHandler):
 
     def __init__(self, settings):
-        super(CheckCL, self).__init__(settings, path='data/eval/')
+        super(CheckCL, self).__init__(settings, path=False)#'data/eval/')
 
     def __len__(self):
         return self.len

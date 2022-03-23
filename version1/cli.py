@@ -24,6 +24,7 @@ if __name__ == '__main__':
         run_op(settings)
         print("Training data-set created!")
 
+    elif operation.operation == 'create_eval':
         settings.operation = "create evaluation instances"
         print('\nstarting to create evaluation data')
         run_op(settings)

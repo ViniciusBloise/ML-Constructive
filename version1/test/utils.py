@@ -372,5 +372,5 @@ class Metrics_Handler:
         PLR = TPR / (1 + FPR)
         # PLR = self.TP / (self.TP + self.FN + 3 * self.FP)
         BAL_PLR = self.TP / (self.FP + 1)
-        PREC = self.TP / (self.FP + self.TP)
+        PREC = 0 if self.FP + self.TP == 0 else self.TP / (self.FP + self.TP)
         return TPR, FNR, FPR, TNR, ACC, BAL_ACC, PLR, BAL_PLR, PREC

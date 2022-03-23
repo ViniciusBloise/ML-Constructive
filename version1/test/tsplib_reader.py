@@ -7,6 +7,7 @@ from typing import List
 import torch
 import tempfile
 import numpy as np
+import sys
 from concorde.tsp import TSPSolver
 from torch.utils.data import Dataset
 from numpy.core._multiarray_umath import ndarray

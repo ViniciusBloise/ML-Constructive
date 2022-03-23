@@ -18,6 +18,7 @@ class Settings:
     cases_in_L_P: int = 2
     last_file: int = 30
     bs: int = 256
+    starting_from = 6
 
     def __init__(self):
         pass

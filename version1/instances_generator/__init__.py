@@ -11,9 +11,10 @@ def create_instances(settings):
 
     number_instances_per_file = settings.num_instances_x_file
     number_files = settings.total_number_instances // number_instances_per_file
-    print(f"total number of files {number_files}")
+    starting_from = settings.starting_from
+    print(f"total number of files {number_files}, starting from {starting_from}")
 
-    iterator_on_files = tqdm(range(number_files))
+    iterator_on_files = tqdm(range(starting_from, number_files))
 
     gt = GenerateInstances(settings)
     for file in iterator_on_files:
