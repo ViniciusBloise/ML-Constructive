@@ -28,3 +28,7 @@ __pycache__/
 /pyconcorde/pyconcorde.egg-info/SOURCES.txt
 /pyconcorde/pyconcorde.egg-info/top_level.txt
 /pyconcorde/.idea/vcs.xml
+*.icloud
+.DS_Store
+data/.DS_Store
+*.pth

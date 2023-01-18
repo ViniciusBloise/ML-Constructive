@@ -39,6 +39,7 @@ def transformation(pos, city1, city2, neigs):
 
 def sort_the_list_of_files(path):
     list_files = os.listdir(path)
+    print(path)
     dic_files = {int(f_n[:-8]): f_n for f_n in list_files if ".h5" in f_n}
     sorted_list_of_file = [el[1] for el in sorted(dic_files.items(), key=lambda kv: kv[0])]
     return sorted_list_of_file
