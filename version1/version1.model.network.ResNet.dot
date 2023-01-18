@@ -1,0 +1,9 @@
+digraph "version1.model.network.ResNet" {
+rankdir=BT
+charset="utf-8"
+"version1.model.network.ResNet" [color="black", fontcolor="black", label="{version1.model.network.ResNet|decoder\lencoder1\lpre_decoder_dim\l|forward(x)\ltrain(mode)\lweight_init(m)\l}", shape="record", style="solid"];
+"version1.model.network.ResNetEncoder" [color="black", fontcolor="black", label="{version1.model.network.ResNetEncoder|blocks\lblocks_sizes : list\lgate\lgate_size : int\lin_out_block_sizes : list\l|forward(x)\l}", shape="record", style="solid"];
+"version1.model.network.ResnetDecoder" [color="black", fontcolor="black", label="{version1.model.network.ResnetDecoder|avg\ldecoder\l|forward(x)\l}", shape="record", style="solid"];
+"version1.model.network.ResNetEncoder" -> "version1.model.network.ResNet" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="encoder1", style="solid"];
+"version1.model.network.ResnetDecoder" -> "version1.model.network.ResNet" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="decoder", style="solid"];
+}
